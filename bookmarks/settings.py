@@ -75,6 +75,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'bookmarks.wsgi.application'
 
+# Added custom authentication model.
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentiction.EmailAuthBackend',
+]
+
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
