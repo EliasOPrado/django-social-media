@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'social_django',
+    # 'social_django',
     
 ]
 
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'bookmarks.wsgi.application'
 # Added custom authentication model.
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
-    'account.authentiction.EmailAuthBackend',
+    'account.authentication.EmailAuthBackend',
 ]
 
 
