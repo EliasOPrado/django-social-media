@@ -36,5 +36,3 @@ def dashboard(request):
                   'account/dashboard.html',
                   {'section': 'dashboard'})
 
-
-
