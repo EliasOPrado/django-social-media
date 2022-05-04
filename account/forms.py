@@ -1,5 +1,5 @@
 from django import forms
-from django.contrig.auth.models import User
+from django.contrib.auth.models import User
 
 
 class LoginForm(forms.Form):
@@ -13,7 +13,7 @@ class LoginForm(forms.Form):
     password = forms.CharField(widget=forms.PasswordInput)
 
 
-class UserRegistration(forms.ModelForm):
+class UserRegistrationForm(forms.ModelForm):
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Repeat Password', widget=forms.PasswordInput)
 
