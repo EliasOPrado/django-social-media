@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'bookmarks.wsgi.application'
 # Added custom authentication model.
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
-    'account.authentication.EmailAuthBackend',
+    # 'account.authentication.EmailAuthBackend',
 ]
 
 
