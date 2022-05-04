@@ -22,6 +22,9 @@ class UserRegistration(forms.ModelForm):
         fields = ('username', 'first_name', 'email')
 
     def clean_password2(self):
+        # clean_<fieldname> is similar to resolve_<fieldname> of -
+        # django-graphene as well as get_<fieldname> of DRF.
+        # In other words, field validation.
         cd = self.cleaned_data
         if cd['password'] != cd['password2']:
             raise forms.ValidationError('Passwords don\'t match.')
