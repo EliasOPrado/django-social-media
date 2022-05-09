@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.utils import slugfy
 
 # Create your models here.
 class Image(models.Model):
@@ -14,3 +15,10 @@ class Image(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        # transform title into slug-
+        # using the slugfy() function.
+        if not self.slug:
+            self.slug = slugfy(self.title)
+        super().save(*args, **kwargs)
