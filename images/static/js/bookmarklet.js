@@ -20,8 +20,6 @@
     script.src =
       "//ajax.googleapis.com/ajax/libs/jquery" +
       jquery_version +
-      "-" +
-      jquery_version +
       "/jquery.min.js";
 
     // adds the script to the head for processing.
