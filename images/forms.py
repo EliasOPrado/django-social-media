@@ -1,6 +1,5 @@
 
-   
-from urllib import request
+from urllib.request import Request, urlopen
 from django import forms
 from django.core.files.base import ContentFile
 from django.utils.text import slugify
@@ -34,7 +33,7 @@ class ImageCreateForm(forms.ModelForm):
         image_name = f'{name}.{extension}'
 
         # download image from the given URL
-        response = request.urlopen(image_url)
+        response = urlopen(image_url)
         image.image.save(image_name,
                          ContentFile(response.read()),
                          save=False)

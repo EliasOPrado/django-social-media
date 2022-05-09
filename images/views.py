@@ -7,11 +7,12 @@ from .forms import ImageCreateForm
 def image_create(request):
     if request.method == 'POST':
         # form is sent
-        form = ImageCreateForm(data=request.POST)
+        form = ImageCreateForm(data=request.GET)
         if form.is_valid():
+            print("BATEU AQUI....")
             # form data is valid
             new_item = form.save(commit=False)
-
+            print("NEW ITEM --->", new_item)
             # assign current user to the item
             new_item.user = request.user
             new_item.save()
