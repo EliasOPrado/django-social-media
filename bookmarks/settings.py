@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'images',
     'django_extensions',
     'easy_thumbnails',
+    'actions'
     # 'social_django',
     
 ]
