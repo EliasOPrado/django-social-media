@@ -11,7 +11,15 @@ class Profile(models.Model):
         return f'Profile for user {self.user.username}'
 
 class Contact(models.Model):
-    # model to create users relationship.
+    """
+    model to create users relationship. 
+    usage:
+    user1 = User.objects.get(id=1)
+    user2 = User.objects.get(id=2)
+    Contact.objects.create(user_from=user1, user_to=user2)
+    """
+    # 
+
     user_from = models.ForeignKey('auth.User', 
                                   related_name='rel_from_set',
                                   on_delete=models.CASCADE)
