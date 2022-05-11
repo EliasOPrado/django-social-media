@@ -37,6 +37,7 @@ class Contact(models.Model):
 
 
 # add the following field dynamically into User model.
+# --- monkey patching ---
 user_model = get_user_model()
 user_model.add_to_class('following',
                         models.ManyToManyField('self',
