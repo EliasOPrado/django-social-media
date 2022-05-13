@@ -20,3 +20,10 @@
 - Create a system that allow users follow each other.
 - Apply a functionality to show shared pictures and implement a bookmarklet for user to share pictures from any website.
 - An activity stream that allows users see the content the users they follow.
+
+#### Technologies used:
+- Django 3.0
+- SQLite3
+- Redis
+- jQuery
+- AJAX
