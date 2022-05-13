@@ -1,5 +1,8 @@
 ## Django Social Media.
 
+### Dashboard:
+<img src="account/static/images/dashboard.png" >
+
 #### Funcionalities:
 - Applied an authentication system to allow users to sign up, login, edit their profiles and modify or reset passwords.
 - Create a system that allow users follow each other.
