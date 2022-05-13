@@ -73,7 +73,9 @@ def dashboard(request):
         # if the user is follwing other users,
         # get only its actions.
         actions = actions.filter(user_id__in=following_ids)
-    actions = actions.select_related('user', 'user_pofile')[:10]
+    actions = actions.select_related('user', 'user__pofile')\
+                    .prefetch_related('target')[:10]
+                    
     return render(request,
                   'account/dashboard.html',
                   {'section': 'dashboard',
